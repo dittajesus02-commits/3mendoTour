@@ -1,0 +1,502 @@
+<!-- src/app/landing/landing.html -->
+
+<div class="page">
+
+ <!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar__inner">
+
+    <!-- LEFT: brand -->
+    <div class="brand">
+      <img class="brand__logo" src="resources/logo.png" alt="3mendo Tour" />
+      <div class="brand__text">
+        <span class="brand__name">3mendo Tour</span>
+        <span class="brand__tag"> “No es un viaje, es una historia”</span>
+      </div>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="nav">
+      <a class="nav__link" href="#tours">Tours</a>
+      <a class="nav__link" href="#ofrecemos">Ofrecemos</a>
+      <a class="nav__link" href="#incluye">Incluye</a>
+      <a class="nav__link" href="#galeria">Galería</a>
+      <a class="nav__link" href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- RIGHT: actions -->
+    <div class="topbar__actions">
+      <a class="btn btn--soft btn--sm topbar__cta" (click)="openWhatsApp()">Agenda hoy</a>
+
+      <!-- MOBILE TOGGLE -->
+      <button class="menuBtn" type="button"
+              [attr.aria-expanded]="isMenuOpen"
+              aria-label="Abrir menú"
+              (click)="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU DROPDOWN -->
+  <div class="mobileMenu" [class.is-open]="isMenuOpen">
+    <a class="mobileMenu__link" href="#tours" (click)="closeMenu()">Tours</a>
+    <a class="mobileMenu__link" href="#ofrecemos" (click)="closeMenu()">Ofrecemos</a>
+    <a class="mobileMenu__link" href="#incluye" (click)="closeMenu()">Incluye</a>
+    <a class="mobileMenu__link" href="#galeria" (click)="closeMenu()">Galería</a>
+    <a class="mobileMenu__link" href="#contacto" (click)="closeMenu()">Contacto</a>
+
+    <a class="btn btn--primary btn--full mobileMenu__cta" href="#contacto" (click)="closeMenu(); openWhatsApp()">
+      Agenda hoy
+    </a>
+  </div>
+</header>
+
+
+  <!-- HERO (FOTO FULL + OVERLAY + SHAPE MONTAÑA) -->
+  <section class="hero" id="home">
+    <!-- Fondo con tu imagen generada --> 
+  <div class="hero__bg" style="background-image:url('/resources/background1.png');"></div>
+
+
+    <!-- Overlay para que el texto siempre se lea -->
+    <div class="hero__overlay"></div>
+
+    <div class="container hero__inner hero__content">
+
+      <!-- Columna izquierda -->
+      <div class="hero__left">
+
+        <div class="pill">
+          <span class="pill__dot"></span>
+          <span>Salida desde <b>Valencia</b> · Tours full day</span>
+        </div>
+
+        <h1 class="hero__title">
+          ¿San Valentín en la playa?
+          <span class="hero__titleAccent">Me has hecho nadar</span>
+        </h1>
+
+        <p class="hero__desc">
+          Planes románticos, full aventura y cero estrés: tú solo llega,
+          nosotros nos encargamos del resto.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#tours">Ver tours</a>
+          <a class="btn btn--glass" (click)="openWhatsApp()">
+              <img
+                src="/assets/icon/ws.svg"
+                alt="WhatsApp"
+                width="24"
+                height="24"
+                style="margin-right:2px; vertical-align:middle;"
+            />
+                Cotizar por WhatsApp</a>
+        </div>
+
+        <div class="hero__stats">
+       <div class="stat">
+            <div class="stat__value">🚌 Salida desde Valencia</div>
+            <div class="stat__label">Punto céntrico y accesible para todo el país</div>
+            </div>
+
+            <div class="stat">
+            <div class="stat__value">💑 Ideal para parejas</div>
+            <div class="stat__label">Plan romántico para desconectarse y disfrutar</div>
+            </div>
+
+            <div class="stat">
+            <div class="stat__value">🍹 Tiempo libre</div>
+            <div class="stat__label">Relájate en la playa sin horarios estrictos</div>
+            </div>
+
+        </div>
+
+      </div>
+
+    <!-- Columna derecha (card destacado) -->
+    <aside class="heroCard heroCard--ref" style="background-image:url('/resources/background3.png');">
+    <div class="heroCard__overlay" aria-hidden="true"></div>
+
+    <div class="heroCard__inner">
+        <div class="heroCard__head">
+        <div class="heroCard__headText">
+            <h3 class="heroCard__title">La Ciénaga</h3>
+            <p class="heroCard__meta">14 Feb · Playa · lancha · Guía</p>
+            <p class="heroCard__meta_2">Sólo por 3mendo Tour</p>
+        </div>
+
+        <span class="heroCard__price">$30</span>
+        </div>
+
+
+        <div class="heroCard__divider "></div>
+
+
+        <div class="heroCard__stats styleModern">
+        <div class="stat2">
+            <div class="stat__top">+120</div>
+            <div class="stat__bottom">salidas</div>
+        </div>
+
+        <div class="v-divider "></div>
+
+        <div class="stat2 stat--mid">
+            <div class="stat__top"><span class="stat__star">★</span> 4.9/5</div>
+            <div class="stat__bottom">reseñas</div>
+        </div>
+
+        <div class="v-divider"></div>
+
+
+        <div class="stat2 stat--right align-items-center">
+            <div class="stat__top">Full Day</div>
+            <div class="stat__bottom"> ida y vuelta</div>
+        </div>
+        </div>
+
+        <div class="heroCard__divider"></div>
+
+        <div class="heroCard__actions">
+        <a class="btnPill btnPill--primary" (click)="openWhatsApp()">Reservar</a>
+        <a class="btnPill btnPill--ghost" href="#galeria">Ver fotos</a>
+        </div>
+
+        <div class="heroCard__divider heroCard__divider--soft"></div>
+
+        <div class="heroCard__note">
+        Cupos limitados. Confirma con tu nombre y número y te guardamos puesto.
+        </div>
+    </div>
+    </aside>
+
+
+    </div>
+
+    <!-- SHAPE “MONTAÑA/ONDA” (como Adventor) -->
+    <svg class="hero__shape" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+      <path
+        d="M0,70 C120,110 240,25 360,40 C480,55 600,105 720,90
+           C840,75 960,25 1080,40 C1200,55 1320,110 1440,70
+           L1440,140 L0,140 Z"
+        fill="#ffffff"
+      ></path>
+    </svg>
+  </section>
+
+  <!-- TOURS -->
+  <section class="section" id="tours">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Tours que están on fire 🔥</h2>
+          <p class="section__subtitle">
+            Planes listos para irte con tu gente (o con tu amor) sin complicarte.
+          </p>
+        </div>
+
+        <div class="filters">
+          <button class="filter is-active" type="button">Todos</button>
+          <button class="filter" type="button">Playa</button>
+          <button class="filter" type="button">Aventura</button>
+          <button class="filter" type="button">Romántico</button>
+        </div>
+      </div>
+
+  <div class="grid">
+
+  <!-- TOUR 1 -->
+  <article class="tour">
+    <div
+      class="tour__media"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80');
+        background-size: cover;
+        background-position: center;
+      ">
+    </div>
+
+    <div class="tour__body">
+      <div class="tour__row">
+        <h3 class="tour__title">La Ciénaga</h3>
+        <div class="tour__price">30$</div>
+      </div>
+
+      <p class="tour__desc">
+        Agua turquesa, full relax, paseo en lancha y guía. Perfecto para San Valentín.
+      </p>
+
+      <div class="tour__actions">
+        <a class="btn btn--secondarySoft btn--full" (click)="openWhatsApp()">Cotizar</a>
+        <a class="btn btn--glass btn--full" href="#galeria">Fotos</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- TOUR 2 -->
+  <article class="tour">
+    <div
+      class="tour__media"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80');
+        background-size: cover;
+        background-position: center;
+      ">
+    </div>
+
+    <div class="tour__body">
+      <div class="tour__row">
+        <h3 class="tour__title">Ruta Sunset</h3>
+        <div class="tour__price">45$</div>
+      </div>
+
+      <p class="tour__desc">
+        Atardecer + spots secretos + fotos pro. Ideal para contenido y vibes chill.
+      </p>
+
+      <div class="tour__actions">
+        <a class="btn btn--secondarySoft btn--full" (click)="openWhatsApp()">Cotizar</a>
+        <a class="btn btn--glass btn--full" href="#galeria">Fotos</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- TOUR 3 -->
+  <article class="tour">
+    <div
+      class="tour__media"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1400&q=80');
+        background-size: cover;
+        background-position: center;
+      ">
+    </div>
+
+    <div class="tour__body">
+      <div class="tour__row">
+        <h3 class="tour__title">Escapada en pareja</h3>
+        <div class="tour__price">50$</div>
+      </div>
+
+      <p class="tour__desc">
+        Plan diseñado para 2: detalles, ruta bonita y cero estrés. Tú solo disfruta.
+      </p>
+
+      <div class="tour__actions">
+        <a class="btn btn--secondarySoft btn--full" (click)="openWhatsApp()">Cotizar</a>
+        <a class="btn btn--glass btn--full" href="#galeria">Fotos</a>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+
+
+    </div>
+  </section>
+
+<!-- ¿QUÉ INCLUYE? -->
+<section class="section section--soft incluye" id="incluye">
+  <div class="container">
+
+    <div class="section__head">
+      <div>
+        <h2 class="section__title">¿Qué incluye tu plan?</h2>
+        <p class="section__subtitle">
+          Tú solo llegas. Nosotros nos encargamos del resto.
+        </p>
+      </div>
+    </div>
+
+    <div class="incluye__grid">
+
+      <div class="incluye__item">
+        <div class="incluye__icon">🚌</div>
+        <h3 class="incluye__title">Transporte cómodo</h3>
+        <p class="incluye__text">
+          Unidades cómodas con aire acondicionado, salidas organizadas desde Valencia.
+        </p>
+      </div>
+
+      <div class="incluye__item">
+        <div class="incluye__icon">🧭</div>
+        <h3 class="incluye__title">Guía especializado</h3>
+        <p class="incluye__text">
+          Te acompañamos durante todo el recorrido para que disfrutes sin preocupaciones.
+        </p>
+      </div>
+
+      <div class="incluye__item">
+        <div class="incluye__icon">⛵</div>
+        <h3 class="incluye__title">Paseos y experiencias</h3>
+        <p class="incluye__text">
+          Lancha, playas, rutas especiales y spots únicos según el tour.
+        </p>
+      </div>
+
+      <div class="incluye__item">
+        <div class="incluye__icon">📸</div>
+        <h3 class="incluye__title">Momentos para recordar</h3>
+        <p class="incluye__text">
+          Tiempo para fotos, relax y disfrutar el plan a tu ritmo.
+        </p>
+      </div>
+
+      <div class="incluye__item">
+        <div class="incluye__icon">❤️</div>
+        <h3 class="incluye__title">Planes especiales</h3>
+        <p class="incluye__text">
+          Romántico, aventura o relax. Adaptamos el mood a lo que buscas.
+        </p>
+      </div>
+
+      <div class="incluye__item incluye__item--highlight">
+        <div class="incluye__icon">✨</div>
+        <h3 class="incluye__title">Atención 3mendo</h3>
+        <p class="incluye__text">
+          Organización, seguimiento y trato cercano desde que agendas hasta que vuelves.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- QUIÉNES SOMOS -->
+<section class="section section--soft about" id="quienes-somos">
+  <div class="container about__grid">
+
+    <!-- TEXTO -->
+    <div class="about__content">
+      <h2 class="section__title">¿Quiénes somos?</h2>
+
+      <p class="about__lead">
+        Somos personas que aman viajar, organizar y hacer que otros disfruten sin estrés.
+      </p>
+
+      <p>
+        En <b>3mendo Tour</b> creemos que un buen viaje no empieza cuando llegas,
+        sino desde el momento en que decides irte.
+      </p>
+
+      <p>
+        Somos un equipo joven, organizado y apasionado por crear experiencias reales:
+        playas increíbles, rutas bonitas, planes en pareja y salidas con amigos
+        que se disfrutan sin complicaciones.
+      </p>
+
+      <p class="about__highlight">
+        Tú solo llegas al punto de salida.  
+        Nosotros nos encargamos del transporte, la logística y los detalles  
+        para que vivas un día <b>100% 3mendo</b>.
+      </p>
+    </div>
+
+    <!-- IMAGEN -->
+ <img class="about__image" src="resources/vzla.png" alt="3mendo Tour" />
+
+  </div>
+</section>
+
+  
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria">
+    <div class="container">
+
+        <div class="section__head">
+        <div>
+            <h2 class="section__title">Momentos 3mendo 📸</h2>
+            <p class="section__subtitle">
+            Playas, rutas y recuerdos que se quedan contigo.
+            </p>
+        </div>
+        </div>
+
+        <div class="gallery">
+
+        <!-- Imagen grande -->
+        <div class="g g--1"
+            style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');">
+        </div>
+
+        <div class="g"
+            style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80');">
+        </div>
+
+        <div class="g"
+            style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80');">
+        </div>
+
+        <div class="g g--4"
+            style="background-image:url('https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1200&q=80');">
+        </div>
+
+        <div class="g"
+            style="background-image:url('https://haimaneltroudi.com/wp-content/uploads/2023/02/haiman-el-troudi-el-cambiante-paisaje-de-los-medanos-de-coro-12-1-300x199.jpg');">
+        </div>
+
+        <div class="g"
+            style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80');">
+        </div>
+
+        </div>
+
+    </div>
+    </section>
+
+    
+
+<footer class="footer footer--dark" id="contacto">
+  <div class="container footer__inner">
+
+    <!-- Brand / About -->
+    <div class="footer__col footer__brand">
+      <div class="footer__brandLine">
+        <img src="resources/logo.png" alt="3mendo Tour" class="footer__logoImg" />
+        <div class="footer__name">3mendo Tour</div>
+      </div>
+
+      <p class="footer__desc">
+        No es un viaje, es una historia. Creamos experiencias reales para que
+        solo disfrutes.
+      </p>
+
+      <div class="footer__meta">
+        📲 WhatsApp · 📍 Valencia · 🇻🇪
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="footer__col">
+      <h4 class="footer__title">Explorar</h4>
+      <a class="footerLink" href="#home">Inicio</a>
+      <a class="footerLink" href="#tours">Tours</a>
+      <a class="footerLink" href="#galeria">Galería</a>
+      <a class="footerLink" href="#contacto">Contacto</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer__col">
+      <h4 class="footer__title">Contáctanos</h4>
+      <div class="footer__contact">📍 Valencia, Venezuela</div>
+      <div class="footer__contact">📲 WhatsApp disponible</div>
+      <div class="footer__contact">✈️ Tours nacionales</div>
+    </div>
+
+  </div>
+
+<div class="footer__bottom">
+  © {{ currentYear }} 3mendo Tour · Todos los derechos reservados
+</div>
+
+
+</footer>
+
+
+</div>

@@ -1,0 +1,353 @@
+<div class="page">
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#">
+        <!-- Cambia el src por tu logo -->
+        <img class="brand__logo" src="assets/3mendo-logo.png" alt="3mendo Tour" />
+        <div class="brand__text">
+          <span class="brand__name">3mendo Tour</span>
+          <span class="brand__tag">Experiencias que se sienten</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="#tours">Tours</a>
+        <a class="nav__link" href="#beneficios">Incluye</a>
+        <a class="nav__link" href="#galeria">Galería</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn--primary topbar__cta" href="#contacto">Agenda hoy</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__inner">
+      <div class="hero__left">
+        <div class="pill">
+          <span class="pill__dot"></span>
+          Salidas desde <strong>Valencia</strong> · Tours full day
+        </div>
+
+        <h1 class="hero__title">
+          ¿San Valentín en la playa?
+          <span class="hero__titleAccent">Me has hechizado</span>
+        </h1>
+
+        <p class="hero__desc">
+          Planes románticos, full aventura y cero estrés: tú solo llega, nosotros nos encargamos del resto.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#tours">Ver tours</a>
+          <a class="btn btn--glass" href="#contacto">Cotizar por WhatsApp</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__value">+120</div>
+            <div class="stat__label">salidas realizadas</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">4.9/5</div>
+            <div class="stat__label">reseñas</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">Full Day</div>
+            <div class="stat__label">ida y vuelta</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="heroCard">
+          <div class="heroCard__top">
+            <span class="heroCard__badge">Destacado</span>
+            <span class="heroCard__price">30$</span>
+          </div>
+
+          <h3 class="heroCard__title">La Ciénaga</h3>
+          <p class="heroCard__meta">14 Feb · Playa + lancha · Guía especializado</p>
+
+          <div class="heroCard__chips">
+            <span class="chip">Ocumare</span>
+            <span class="chip">Transporte</span>
+            <span class="chip">Ida y vuelta</span>
+            <span class="chip">Día soñado</span>
+          </div>
+
+          <div class="heroCard__actions">
+            <a class="btn btn--primary btn--sm" href="#contacto">Reservar</a>
+            <a class="btn btn--soft btn--sm" href="#galeria">Ver fotos</a>
+          </div>
+
+          <div class="heroCard__note">
+            Cupos limitados. Confirma con tu nombre + número y te guardamos puesto.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tours -->
+  <section class="section" id="tours">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Tours que están on fire 🔥</h2>
+          <p class="section__subtitle">Planes listos para irte con tu gente (o con tu amor) sin complicarte.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter is-active" type="button">Todos</button>
+          <button class="filter" type="button">Playa</button>
+          <button class="filter" type="button">Aventura</button>
+          <button class="filter" type="button">Romántico</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="tour">
+          <div class="tour__media">
+            <!-- Pon aquí una foto real si quieres -->
+            <div class="tour__mediaOverlay"></div>
+            <div class="tour__tag">Playa</div>
+          </div>
+
+          <div class="tour__body">
+            <div class="tour__row">
+              <h3 class="tour__title">La Ciénaga</h3>
+              <span class="tour__price">30$</span>
+            </div>
+
+            <p class="tour__desc">
+              Aguas brutales, full fotos, paseo en lancha y guía. Perfecto para San Valentín.
+            </p>
+
+            <div class="tour__info">
+              <span class="info">🚐 Traslado cómodo</span>
+              <span class="info">🛥️ Lancha</span>
+              <span class="info">🧭 Guía</span>
+            </div>
+
+            <div class="tour__actions">
+              <a class="btn btn--primary btn--sm" href="#contacto">Agendar</a>
+              <a class="btn btn--soft btn--sm" href="#galeria">Fotos</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="tour">
+          <div class="tour__media tour__media--alt1">
+            <div class="tour__mediaOverlay"></div>
+            <div class="tour__tag">Aventura</div>
+          </div>
+
+          <div class="tour__body">
+            <div class="tour__row">
+              <h3 class="tour__title">Ruta Sunset</h3>
+              <span class="tour__price">—</span>
+            </div>
+
+            <p class="tour__desc">
+              Atardecer + spots secretos + fotos pro. Ideal para contenido y vibes chill.
+            </p>
+
+            <div class="tour__info">
+              <span class="info">📍 Spots</span>
+              <span class="info">🌅 Sunset</span>
+              <span class="info">📸 Fotos</span>
+            </div>
+
+            <div class="tour__actions">
+              <a class="btn btn--primary btn--sm" href="#contacto">Cotizar</a>
+              <a class="btn btn--soft btn--sm" href="#contacto">Disponibilidad</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="tour">
+          <div class="tour__media tour__media--alt2">
+            <div class="tour__mediaOverlay"></div>
+            <div class="tour__tag">Romántico</div>
+          </div>
+
+          <div class="tour__body">
+            <div class="tour__row">
+              <h3 class="tour__title">Escapada en pareja</h3>
+              <span class="tour__price">—</span>
+            </div>
+
+            <p class="tour__desc">
+              Plan diseñado para 2: detalles, ruta bonita, y cero estrés. Tú solo disfruta.
+            </p>
+
+            <div class="tour__info">
+              <span class="info">💘 Detalles</span>
+              <span class="info">🧺 Picnic</span>
+              <span class="info">🎶 Playlist</span>
+            </div>
+
+            <div class="tour__actions">
+              <a class="btn btn--primary btn--sm" href="#contacto">Armar plan</a>
+              <a class="btn btn--soft btn--sm" href="#contacto">Preguntar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="section section--soft" id="beneficios">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">¿Qué incluye?</h2>
+          <p class="section__subtitle">Lo que normalmente te da ladilla resolver… aquí viene resuelto.</p>
+        </div>
+      </div>
+
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit__icon">🚐</div>
+          <div class="benefit__title">Traslado cómodo</div>
+          <div class="benefit__text">Unidades con A/A y salida puntual.</div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit__icon">🛟</div>
+          <div class="benefit__title">Logística completa</div>
+          <div class="benefit__text">Coordinación de accesos, horarios y retornos.</div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit__icon">🧭</div>
+          <div class="benefit__title">Guía especializado</div>
+          <div class="benefit__text">Te llevamos a lo bueno y evitamos lo malo.</div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit__icon">💬</div>
+          <div class="benefit__title">Atención rápida</div>
+          <div class="benefit__text">WhatsApp para dudas, pagos y confirmaciones.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Galería</h2>
+          <p class="section__subtitle">Para que te antojes sin pena.</p>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="g g--1"></div>
+        <div class="g g--2"></div>
+        <div class="g g--3"></div>
+        <div class="g g--4"></div>
+        <div class="g g--5"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contacto">
+    <div class="container cta__inner">
+      <div class="cta__left">
+        <h2 class="cta__title">¿Listo pa’ reservar?</h2>
+        <p class="cta__text">
+          Escríbenos y te pasamos disponibilidad, punto de salida y métodos de pago.
+        </p>
+
+        <div class="cta__actions">
+          <!-- Cambia el número al tuyo -->
+          <a class="btn btn--primary" href="https://wa.me/584124589934" target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
+          <a class="btn btn--glass" href="https://instagram.com/3mendotour" target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+        </div>
+
+        <div class="cta__mini">
+          <span>@3mendoplan</span>
+          <span class="dot">•</span>
+          <span>+58 412-4589934</span>
+        </div>
+      </div>
+
+      <div class="cta__right">
+        <form class="form" action="#" method="post">
+          <div class="form__row">
+            <label class="label">
+              Nombre
+              <input class="input" type="text" placeholder="Tu nombre" />
+            </label>
+
+            <label class="label">
+              Fecha
+              <input class="input" type="date" />
+            </label>
+          </div>
+
+          <label class="label">
+            Tour de interés
+            <select class="input">
+              <option>La Ciénaga</option>
+              <option>Ruta Sunset</option>
+              <option>Escapada en pareja</option>
+            </select>
+          </label>
+
+          <label class="label">
+            Nota
+            <textarea class="input input--area" rows="3" placeholder="Cuántas personas, dudas, etc."></textarea>
+          </label>
+
+          <button class="btn btn--primary btn--full" type="button">
+            Enviar (demo)
+          </button>
+
+          <p class="form__hint">
+            *Este form es visual. Si quieres, lo conectamos directo a WhatsApp con el mensaje prellenado.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">3mendo Tour</div>
+        <div class="footer__text">Tours, rutas y planes en Venezuela. Playa, aventura y romance.</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="#tours">Tours</a>
+        <a class="footer__link" href="#beneficios">Incluye</a>
+        <a class="footer__link" href="#galeria">Galería</a>
+        <a class="footer__link" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating -->
+  <a class="wa" href="https://wa.me/584124589934" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+    <span class="wa__icon">💬</span>
+    <span class="wa__text">WhatsApp</span>
+  </a>
+</div>
