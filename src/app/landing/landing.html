@@ -8,7 +8,7 @@
 
     <!-- LEFT: brand -->
     <div class="brand">
-      <img class="brand__logo" src="resources/logo.png" alt="3mendo Tour" />
+      <img class="brand__logo" src="assets/resources/logo.png" alt="3mendo Tour" />
       <div class="brand__text">
         <span class="brand__name">3mendo Tour</span>
         <span class="brand__tag"> “No es un viaje, es una historia”</span>
@@ -57,8 +57,9 @@
   <!-- HERO (FOTO FULL + OVERLAY + SHAPE MONTAÑA) -->
   <section class="hero" id="home">
     <!-- Fondo con tu imagen generada --> 
-  <div class="hero__bg" style="background-image:url('/resources/background1.png');"></div>
+  <!-- <div class="hero__bg" style="background-image:url('/assets/resources/background1.png');"></div> -->
 
+  <div class="hero__bg" style="background-image:url('assets/resources/background1.png');"></div>
 
     <!-- Overlay para que el texto siempre se lea -->
     <div class="hero__overlay"></div>
@@ -87,7 +88,7 @@
           <a class="btn btn--primary" href="#tours">Ver tours</a>
           <a class="btn btn--glass" (click)="openWhatsApp()">
               <img
-                src="/assets/icon/ws.svg"
+                src="assets/icon/ws.svg"
                 alt="WhatsApp"
                 width="24"
                 height="24"
@@ -117,7 +118,7 @@
       </div>
 
     <!-- Columna derecha (card destacado) -->
-    <aside class="heroCard heroCard--ref" style="background-image:url('/resources/background3.png');">
+    <aside class="heroCard heroCard--ref" style="background-image:url('assets/resources/background3.png');">
     <div class="heroCard__overlay" aria-hidden="true"></div>
 
     <div class="heroCard__inner">
@@ -398,7 +399,7 @@
     </div>
 
     <!-- IMAGEN -->
- <img class="about__image" src="resources/vzla.png" alt="3mendo Tour" />
+ <img class="about__image" src="assets/resources/vzla.png" alt="3mendo Tour" />
 
   </div>
 </section>
@@ -458,7 +459,7 @@
     <!-- Brand / About -->
     <div class="footer__col footer__brand">
       <div class="footer__brandLine">
-        <img src="resources/logo.png" alt="3mendo Tour" class="footer__logoImg" />
+        <img src="assets/resources/logo.png" alt="3mendo Tour" class="footer__logoImg" />
         <div class="footer__name">3mendo Tour</div>
       </div>
 
